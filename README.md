@@ -4,3 +4,4 @@ Garbage Collection(i.e, gc) could play a vital effect on golang application perf
 
 These examples could serve as a general reference for understanding golang gc phenomena. Different scenarios need explicit analysis to debug the performance related with golang gc though.
 
+Result of this repository is based on go version: go version go1.15.8 darwin/amd64

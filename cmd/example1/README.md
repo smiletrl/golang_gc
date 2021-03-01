@@ -59,6 +59,6 @@ From gc cycle `gc 8-10`, the live heap size after gc gets reduced a lot, from 60
 
 Next Gc cycle will repeat above process until this endpoint `/foo` finishes processing.
 
-Finally after gc 205, process is complete. But there're still 308MB live heap size remaining. We know GC will set up next gc heap size goal to be 617MB (double 308MB), i.e, next gc won't start until heap size grows near 617MB. But this process has already finished, will this heap size will never be freed until a new request to endpoint `/foo` is made again?
+Finally after gc 205, process is complete. But there're still 308MB live heap size remaining. We know GC will set up next gc heap size goal to be 617MB (double 308MB), i.e, next gc won't start until heap size grows near 617MB. But this process has already finished, will this heap size never be freed until a new request to endpoint `/foo` is made again?
 
 Then we see `gc 206, 207 - ...`. Gc will be forced to run every 120 seconds (2 minutes). We see nothing left on heap anymore after gc 206. We don't send request to `/foo`, no heap size grows, and gc is always forced to run every 2 minutes.

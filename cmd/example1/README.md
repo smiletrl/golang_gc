@@ -8,7 +8,7 @@ A request to endpoint `http:/127.0.0.1:8080/foo` will triger this `expensiveCall
 
 ## Commands to run
 
-Use `GODEBUG="gctrace=1"` to enable garbage collection trace
+Use `GODEBUG="gctrace=1"` to enable garbage collection trace. This sets up the environment variable `GODEBUG`value to be `gctrace=1`
 
 ```
 go build .

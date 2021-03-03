@@ -131,4 +131,4 @@ No GC cycle is logged. The interesting thing is with GC disabled, the performanc
 
 ## GC pacer
 
-GC sets up the heap goal with GOGC (ratio based on previous live heap size). But in the above examples, we can see the next GC cycle starts with a smaller heap size than the goal size. This is controlled by GC pacer. We might cover GC pacer in following examples.
+GC sets up the heap goal with GOGC (ratio based on previous live heap size). But in the above examples, we can see the next GC cycle starts with a heap size smaller than the goal size. This is controlled by GC pacer. We might cover GC pacer in following examples.

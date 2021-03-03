@@ -63,11 +63,11 @@ Finally after gc 205, process is complete. But there're still 308MB live heap si
 
 Then we see `gc 206, 207 - ...`. Gc will be forced to run every 120 seconds (2 minutes). We see nothing left on heap anymore after gc 206. We don't send request to `/foo`, no heap size grows, and gc is always forced to run every 2 minutes.
 
-## GOGC parameter
+## GOGC env variable
 
 In the above example, GC starts when the live heap size grows near a goal. And the goal changes from time to time. The formula to get the goal is `goal = (1 + GOGC/100) * previous-live-heap-size`. The default value of GOGC is 100. We might be interested about the first live heap size used for this formula. The initial heap goal set up in the above example is 5MB.
 
-We may play with this parameter like
+We may play with this environment variable like
 
 ```
 go build .

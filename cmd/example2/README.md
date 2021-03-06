@@ -17,7 +17,6 @@ curl http:/127.0.0.1:8080/foo
 Result looks like
 
 ```
-smiletrl@Rulins-MacBook-Pro example1 % GODEBUG="gctrace=1" GOGC=100  ./example1
 smiletrl@Rulins-MacBook-Pro example2 % GODEBUG="gctrace=1" ./example2
 gc 1 @1.318s 0%: 0.025+0.27+0.004 ms clock, 0.41+0/0.31/0.27+0.072 ms cpu, 4->4->3 MB, 5 MB goal, 16 P
 gc 2 @1.321s 0%: 0.048+0.23+0.004 ms clock, 0.78+0/0.23/0.20+0.076 ms cpu, 10->10->10 MB, 11 MB goal, 16 P
